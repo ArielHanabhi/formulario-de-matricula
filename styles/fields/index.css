@@ -80,4 +80,35 @@ input
 
     color: var(--text-primary);
   }
+
+  &:invalid /* Quando o campo estiver inválido */
+  {
+    border: 0.125rem solid var(--semantic-error);
+  }
+
+  & + small /* Input que tenha small como irmão */
+  {
+    font: var(--text-sm);
+    color: #78716c;
+    
+    display: inline-block; /* small tem por padrão inline */
+    margin-top: .25rem;
+  }
+
+  &[required] +.error /* Quando der erro faça isso */
+  {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+
+    font: var(--text-sm);
+    color: var(--semantic-error);
+
+    margin-top: .25rem;
+  }
+
+  &:not(:focus):valid + .error /* se não estiver em foco,Quando válido suma */
+  {
+    display: none;
+  }
 }
