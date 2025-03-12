@@ -58,3 +58,26 @@ select
 {
   background: url(../../assets/icons/arrow-down-01.svg)no-repeat calc(100% - 1rem);/* Função calc para alinhar o elemento */
 }
+
+.address .flex
+{
+  gap: 1.25rem;
+}
+
+
+.input-wrapper:has([disabled]) /* Todo input wrapper que tem um disabled dentro */
+{
+  opacity: .5;
+}
+
+input
+{
+  &[disabled]
+  {
+    background-color: var(--surface-disabled);
+
+    border: 1px solid var(--stroke-default);
+
+    color: var(--text-primary);
+  }
+}
