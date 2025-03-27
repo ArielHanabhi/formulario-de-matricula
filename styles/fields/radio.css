@@ -51,15 +51,16 @@ label + .radio-wrapper
     {
       background-image: url(../../assets/icons/radio-hover.svg);
     }
+  }
 
-    &:has(:checked) /* Quando tiver algo clicado (checked) */
+  &:has(:checked) /* Quando tiver algo clicado (checked) */
+  {
+    border: 2px solid var(--stroke-highlight);
+  
+    & .radio-image
     {
-      border: 2px solid var(--stroke-highlight);
-
-      & .radio-image
-      {
-        background-image: url(../../assets/icons/radio-checked.svg);
-      }
+      background-image: url(../../assets/icons/radio-checked.svg);
     }
   }
+  
 }
